@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	
+		
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Artificial neural network &middot; Vaiva Vasiliauskaite</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+		
+		
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/fonts.css">
+		
+		<link rel="icon" href="/favicon.ico"/>
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+		
+		<link href="" rel="alternate" type="application/rss+xml" title="Vaiva Vasiliauskaite" />
+
+		<script src="/js/darkmode.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				renderMathInElement(document.body, {
+					delimiters: [
+						{left: "$$", right: "$$", display: true},
+						{left: "$", right: "$", display: false}
+					]
+				});
+			});
+		</script>
+	</head>
+
+    <body>
+        		<nav class="nav">
+			<div class="nav-container">
+				<a href="/">
+					
+						<h2 class="nav-title">Vaiva Vasiliauskaite</h2>
+					
+				</a>
+				<ul>
+    
+    
+        <li>
+            <a href="/contacts/">
+                
+                <span>Contacts</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/fun/">
+                
+                <span>Fun</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/primers/">
+                
+                <span>Primers</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/publications/">
+                
+                <span>Publications</span>
+                
+            </a>
+        </li>
+    
+</ul>
+			</div>
+		</nav>
+
+        <div id="darkModeToggle" onclick="toggleDarkMode()">
+  &#9680; 
+</div>
+
+        
+
+<main>
+	
+
+
+        <div class="post">
+		<div class="post-info">
+    
+        <br>
+        <span>on&nbsp;</span><time datetime="2022-07-27 14:41:16 &#43;0200 CEST">July 27, 2022</time>
+</div>
+
+		<h1 class="post-title">Artificial neural network</h1>
+<div class="post-line"></div>
+
+		
+
+
+		<p>Neural computing is a paradigm which aims to emulate neurological function and learning, defined as computation, decision making, and prediction deduced from experiences rather than by syntactic means. “Artificial Neural Network” (ANN) is constructed merely by appropriately connecting a group of adaptable nodes (“artificial neurons”). ANN is a model of neural computation, deduced from simplified units which mimic integration and activation properties of real neurons. ANN is an example of <a href="/primers/AI">Artificial Intelligence</a> &mdash; a class of computational systems that utilise the paradigm of learning.</p>
+<p>Importantly, not only neuroscience inspires algorithms, but the reverse can and is also true. This is what we are to explore in the following. Why neural networks? This question is answered by the <strong>Universal approximation theorem</strong> of Cybenko (1989): Neural Network with a single hidden layer can approximate any ccontinuous multi-input/multi-output connection with arbitrary accuracy.</p>
+<p>First, let us review typical artificial neural network design. ANN consists of three ingredients:</p>
+<ul>
+<li>Objective function &mdash; a goal, expressed as $F(\mathbf{w})$ which is to be extremised (minimised or maximised).</li>
+<li>Learning rules &mdash; rules for how to update the parameters $\textbf{w}$ in order to improve $F(\textbf{w})$</li>
+<li>Architecture &mdash; how the adaptable nodes (neurons) are arranged and what operations they perform.
+Here $\textbf{w}$ is a vector of the current synaptic weights.</li>
+</ul>
+<p><em>Objective function</em> It is an argument of the objective function:  $F: \textbf{w} \rightarrow \mathbb{R}$</p>
+<p>What (learning or evolutionary) objective function governs the brain is not known. It may not even be an obvious observable.</p>
+<p><em>A learning rule</em> A natural definition of learning is a &ldquo;change to a system&rsquo;&rsquo; that improves performance[1]. Such systemic change is often materialised using gradient descent. Suppose we updated our weights by $\Delta \textbf{w}$. Then we can write
+$\Delta F = F(\textbf{w}+\Delta \textbf{w}) - F(\textbf{w}) = \Delta\textbf{w}^\top \cdot \nabla_{\textbf{w}}F(\textbf{w}).$
+Suppose we want to guarantee improved performance. Gradient-based algorithms derive  from the intuition that we should move in the direction that gives the best improvement for a given stepsize $\eta$. Since the gradient points to the steepest decreases fastest if one goes from $\textbf{w}$ in the direction of the negative gradient of $F(\textbf{w})$.</p>
+<p>We then have an update rule:
+$\textbf{w}(t+1)= \textbf{w}(t) - \eta \nabla_{\textbf{w}}F(\textbf{w}_t)$
+that leads to a monotonic reduction in the value of $F(\textbf{w}_t)$ as $t\rightarrow\infty$.  Alternatives to gradient based methods for global optimisation are: Pattern Search, Genetic Algorithms, Particle Swarm Optimisation, Surrogate Optimisation, Multi-objective Optimisation (also known as Pareto optimisation), Simulated Annealing. Alternative to backpropagation learning can be extreme machine learning.</p>
+<p>The most common method for computing gradients in deep ANNs is backpropagation.</p>
+<p>Neural networks often assume Euclidean <a href="/primers/metricspace">metric space</a> in which $F$ is defined.</p>
+<p><em>Architecture</em> Neural networks are networks of adaptive nodes, arranged in a topologically particular way. Importantly, the network is directed. The changes in the inter-neuron connectivity occur during the training phase. Each artificial neuron integrates the inputs from its predecessors as well as its own biases via some non-linear function whose output is then transmitted to neurons in subsequent layers.</p>
+<p>ANN that would be a realistic model of the brain would require a good description of cell types and their micro- meso- or macro- connectivity. However, to understand the architecture is not sufficient to estimate the circuit. It must be complemented by the knowledge of learning rules and objective functions.</p>
+<p><em>AI set</em> In light of the fact that no learning algorithm can perform well on all possible problems, AI set concerns only problems which &ldquo;most animals perform effortlessly&rsquo;&rsquo;. Much of the NNs success can be attributed to incorporation of &ldquo;inductive biases&rsquo;&rsquo; &mdash; assumptions that one makes about the nature of the solutions to a given optimisation problem. However it appears that deep learning also enables biases that are not a priori defined to emerge during training. This echoes the &ldquo;block of nature and nurture which underpins the adult brain&rsquo;&rsquo;[1].
+Inductive biases in ANNs are:</p>
+<ol>
+<li>Simple explanations (Occam&rsquo;s razor),</li>
+<li>Object permanence</li>
+<li>Visual translation invariance</li>
+<li>focused attention. In brain, such inductive biases are shaped by evolution.
+Therefore it is likely that a candidate for a brain set &mdash; the set of tasks that are important for survival and reproduction for particular species &mdash; would share similarities with the AI set. This feature appears to be very important, since, in contrast to a conventional  belief, neural networks can learn fast and perform well if they have good inductive biases.</li>
+</ol>
+<h2 id="processing-units--other-factoids">Processing units &amp; other factoids</h2>
+<p><strong>Processing units</strong> Neural network processing unit is a neuron. Each neuron has a set of features $\textbf{x}_i$ for neuron $i$.</p>
+<p><strong>Nonlinearity function</strong> Neural network activation functions: perceptron, sigmoid, tanh, ReLU, Leaky ReLU, ELU.</p>
+<p><strong>Learning rule</strong> Vanishing gradient: when input becomes large, $d\sigma/dz\rightarrow 0$ for $z&raquo;0$.  ReLU, ELU ensures the gradient doesn&rsquo;t vanish even for large inputs.</p>
+<p><strong>Regularisation</strong> Dropout, Early stoping, Batch normalisation</p>
+<h1 id="references">References</h1>
+<p>[1] Blake A Richards, Timothy P Lillicrap, Denis Therien, Konrad P Kording, Philippe Beaudoin, Yoshua  Bengio, Rafal Bogacz, and Amelia Christensen. FOCUS — PersPective A deep learning framework for neuroscience. Nature Neuroscience, 16:42</p>
+
+
+		
+	</div>
+
+	<div class="pagination">
+		<a href="/primers/time/" class="left arrow">&#8592;</a>
+
+		<a href="#" class="top">Top</a>
+	</div>
+</main>
+
+
+        		<footer>
+			
+			<span>
+			&copy; <time datetime="2022-09-25 12:39:08.993918 &#43;0200 CEST m=&#43;0.108207864">2022</time> Vaiva. Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			</span>
+		</footer>
+
+    </body>
+</html>

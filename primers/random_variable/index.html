@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	
+		
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Random Variable &middot; Vaiva Vasiliauskaite</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+		
+		
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/fonts.css">
+		
+		<link rel="icon" href="/favicon.ico"/>
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+		
+		<link href="" rel="alternate" type="application/rss+xml" title="Vaiva Vasiliauskaite" />
+
+		<script src="/js/darkmode.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				renderMathInElement(document.body, {
+					delimiters: [
+						{left: "$$", right: "$$", display: true},
+						{left: "$", right: "$", display: false}
+					]
+				});
+			});
+		</script>
+	</head>
+
+    <body>
+        		<nav class="nav">
+			<div class="nav-container">
+				<a href="/">
+					
+						<h2 class="nav-title">Vaiva Vasiliauskaite</h2>
+					
+				</a>
+				<ul>
+    
+    
+        <li>
+            <a href="/contacts/">
+                
+                <span>Contacts</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/fun/">
+                
+                <span>Fun</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/primers/">
+                
+                <span>Primers</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/publications/">
+                
+                <span>Publications</span>
+                
+            </a>
+        </li>
+    
+</ul>
+			</div>
+		</nav>
+
+        <div id="darkModeToggle" onclick="toggleDarkMode()">
+  &#9680; 
+</div>
+
+        
+
+<main>
+	
+
+
+        <div class="post">
+		<div class="post-info">
+    
+        <br>
+        <span>on&nbsp;</span><time datetime="2022-04-28 14:41:16 &#43;0200 CEST">April 28, 2022</time>
+</div>
+
+		<h1 class="post-title">Random Variable</h1>
+<div class="post-line"></div>
+
+		
+
+
+		<h1 id="random-variable">Random variable</h1>
+<p><a href="/primers/probability_theory/">Probability theory</a> defines a probability space as a triple ${\Omega,X,p}$, where $\Omega$ is the space of all elementary events, $X$ are disjoint subsets of $\Omega$, called events and $p$ is a probability function that maps events in $X$ to the closed unit interval $p:X\rightarrow [0,1]$. A random variable $x:\Omega\rightarrow X$ maps from the sample space to events. The probability $p$ of a discrete random variable $x$ belongingto the event $x_i ∈ X$ as the result of a statistical process is: $p({ω ∈ Ω : x(ω) ∈ x_i}) = |x_i|/{|\Omega|}$ assuming there is a uniform probability of any elementary event $\omega$ occurring.</p>
+<p>For any element $\omega\in \Omega$ probability of an event ${\omega|X(\omega)\leq x}$ is called a probability distribution function $Pr(x)$ of $X$.</p>
+<p>The <em>probability density function</em> is defined as
+$p_X(x) = \frac{dPr(x)}{dx}$.</p>
+<p>For some three events $a,b,\omega\in\Omega$, $x_i$ is a subset of the sample space $x_i={\omega|a \leq x(\omega)\leq b }$ and the probability of this event is as before, but over a continuous probability function is defined as
+$Pr({ω ∈ Ω : x(ω) ∈ x_i}) = \int_a^bp(x)dx$
+where $p(x)$ is the <em>probability density function</em>.</p>
+<h2 id="examples-of-pdfs">Examples of PDFs</h2>
+<p><em>Gaussian distribution</em></p>
+<p>$p(x)=\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$.</p>
+<p><em>Uniform ($b&gt;a$)</em></p>
+<p>$p(x) =\frac{1}{b-a}$ if  $a &lt; x &lt; b$, $p(x)=0$ otherwise.</p>
+<p><em>Exponential</em> ($\mu&gt;0$)</p>
+<p>$p(x) = \frac{1}{\mu}e^{-x/\mu}u(x)$</p>
+<h2 id="joint-marginal-conditional-probabilities">Joint, marginal, conditional probabilities</h2>
+<p>For $A,B \in X$, we have :</p>
+<ol>
+<li>$A=\Omega \rightarrow p(A)=1$.</li>
+<li>$A=B \rightarrow p(A)=p(B)$.</li>
+<li>$A\subset \Omega \rightarrow p(A)&lt;1$.</li>
+<li>$A\subset B \rightarrow P(A)&lt;P(B)$.</li>
+</ol>
+<p>The outcome of a process is an event $x_i$ that is the intersection of two sets A,B: $A,B,x_i\in X, p(\omega\in A\cap B:x(\omega)\rightarrow x_i)= p(A\cap B)$.</p>
+<p>Conditional probability is defined as $P(A|B) = \frac{P(A\cap B)}{P(B)}$. Two probabilities are considered independent of one another iff their joint probability is equal to the product of their individual probabilities: $p(x,y)=p(x)p(y)$.</p>
+<p>In case of joint probabilities given more than one random process, multiple probability spaces are consitered: ${\Omega_x,X,p_x},{\Omega_y,Y,p_y}$. Their joint probability space is ${\Omega = \Omega_x\times \Omega_y,XY,p}$.</p>
+<p>Marginalisation: $p(x) = \int_{-∞}^{∞} p(x,y)dy$.</p>
+<p>Bayes&rsquo; theorem: $p(y|x) = \frac{p(x|y)p(y)}{p(x)}$. This leads to a remark that for independent variables, conditioning does not change their probabilities.</p>
+<h2 id="expected-value-and-moments-of-a-random-variable">Expected value and moments of a random variable</h2>
+<p>$r^{\text{th}}$ moment of a random variable $X$ with a PDF $p(x)$ is defined as
+$$
+E[X^r] = \int_{-∞}^{∞}x^rp(x)dx.
+$$
+The first moment is known as expectation value $E[X]=\mu$ and has properties:</p>
+<ol>
+<li>$E[X+Y] = E[X] + E[Y]$</li>
+<li>$E[aX] = aE[X]$</li>
+<li>If $E[Y] = g(X)$, then $E[Y] = \int_{-∞}^{∞} g(x)p(x)dx$</li>
+<li>$E[X|Y] = \int_{-∞}^{∞}xp(x|y)dx$</li>
+</ol>
+<p>The moments $E[(X-\mu)^r]$ are known as central moments. $r=2$ is known as variance $\sigma^2$ or $var(X)$.</p>
+<p>Properties of variance:</p>
+<ol>
+<li>$var(X) = E[X^2]-E[X]$</li>
+<li>$var(X)&gt;0$</li>
+<li>$var(a) = 0$</li>
+</ol>
+<h2 id="covariance">Covariance</h2>
+<p>Covariance is a measure of the joint variability of two random variables. Covariance between two RV is defined as
+$\sigma_{xy} = E[(X-\mu_x)(Y-\mu_y)]=\int_{-∞}^{∞}\int_{-∞}^{∞} (x-\mu_x)(y-\mu_y)p(x,y)dxdy$</p>
+<ol>
+<li>$var(X+Y) = var(X)+var(Y) + 2\sigma_{xy}$</li>
+<li>$var(aX) = a^2var(X)$.</li>
+<li>If $\sigma_{xy}=0$, $E[XY]=E[X]E[Y]$.</li>
+<li>If $E[XY]=0$, $X,Y$ are independent and therefore uncorrelated.</li>
+<li>If they are uncorrelated, they can still be dependent (non-linearly?).</li>
+<li>For random vectors, one has vectors of moments, .e.g. expectation vector, and covariance matrix.</li>
+</ol>
+<p>Discrete random process $x_n$ is a sequence of random variables defined for every integer $n$.
+Auto-covariance is defined as $ACF_k = E[(x_n-\mu_x)(x_{n+k}-\mu_x)]$.
+Cross-correlation is defined as $CCF_k = E[x_n y_{n+k}]$.</p>
+<p>Power spectral density is the FT of ACF, CCF: $P_{xy}(f) = \sum_{k=-∞}^{∞}CCF_ke^{-j2\pi fk}$.</p>
+
+
+		
+	</div>
+
+	<div class="pagination">
+		<a href="/primers/primer_gameoflife/" class="left arrow">&#8592;</a>
+		<a href="/primers/probability_theory/" class="right arrow">&#8594;</a>
+
+		<a href="#" class="top">Top</a>
+	</div>
+</main>
+
+
+        		<footer>
+			
+			<span>
+			&copy; <time datetime="2022-09-25 12:39:08.996615 &#43;0200 CEST m=&#43;0.110905226">2022</time> Vaiva. Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			</span>
+		</footer>
+
+    </body>
+</html>

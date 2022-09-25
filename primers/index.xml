@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Primers on Vaiva Vasiliauskaite</title>
+    <link>https://vv2246.github.io/primers/</link>
+    <description>Recent content in Primers on Vaiva Vasiliauskaite</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 27 Jul 2022 14:41:16 +0200</lastBuildDate><atom:link href="https://vv2246.github.io/primers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Artificial neural network</title>
+      <link>https://vv2246.github.io/primers/artificial_neural_networks/</link>
+      <pubDate>Wed, 27 Jul 2022 14:41:16 +0200</pubDate>
+      
+      <guid>https://vv2246.github.io/primers/artificial_neural_networks/</guid>
+      <description>Neural computing is a paradigm which aims to emulate neurological function and learning, defined as computation, decision making, and prediction deduced from experiences rather than by syntactic means. “Artificial Neural Network” (ANN) is constructed merely by appropriately connecting a group of adaptable nodes (“artificial neurons”). ANN is a model of neural computation, deduced from simplified units which mimic integration and activation properties of real neurons. ANN is an example of Artificial Intelligence &amp;mdash; a class of computational systems that utilise the paradigm of learning.</description>
+    </item>
+    
+    <item>
+      <title>Time</title>
+      <link>https://vv2246.github.io/primers/time/</link>
+      <pubDate>Tue, 14 Jun 2022 14:41:16 +0200</pubDate>
+      
+      <guid>https://vv2246.github.io/primers/time/</guid>
+      <description>Time in Physics Our universe is described using a notion of spacetime, in which events take place.
+These events are characterised by their spatial coordinates, as well as &amp;ldquo;location&amp;rdquo; in time, so spacetime is a special type of Metric space where one coordinate is time. The time coordinate is very special, as it is the only coordinate with which it is meaningful to define an ordering in the values given, the order of time[1].</description>
+    </item>
+    
+    <item>
+      <title>Attractors</title>
+      <link>https://vv2246.github.io/primers/attractors/</link>
+      <pubDate>Tue, 31 May 2022 14:41:16 +0200</pubDate>
+      
+      <guid>https://vv2246.github.io/primers/attractors/</guid>
+      <description>The basin of attraction is the set of initial conditions from which the solutions converge asymptotically to a given attractor. Since the basin can include the points quite distant from the attracting set, the size of the basin, as a general rule, is not determined by the local properties of the attractor. . In dissipative maps and flows, it is delimited by the complex geometrical configuration of stable manifolds of unstable invariant sets, which can lead to fractal boundaries[1]</description>
+    </item>
+    
+    <item>
+      <title>Emergence</title>
+      <link>https://vv2246.github.io/primers/emergece/</link>
+      <pubDate>Sun, 22 May 2022 14:41:16 +0200</pubDate>
+      
+      <guid>https://vv2246.github.io/primers/emergece/</guid>
+      <description>In the so-called sciences of complexity (e.g., non-linear dynamics, theoretical biology, complex adaptive systems, artificial life, artificial intelligence, cognitive science), &amp;ldquo;complex&amp;rdquo; phenomena, such as the appearance of life on Earth, the evolution of new species, or the structure of cognitive thought, are often considered as instances of some emergent higher-order structure that may be explained by the lower-level dynamics generating the collective behaviour or emergent property of the system in question.</description>
+    </item>
+    
+    <item>
+      <title>Perceptron</title>
+      <link>https://vv2246.github.io/primers/perceptron/</link>
+      <pubDate>Wed, 04 May 2022 14:41:16 +0200</pubDate>
+      
+      <guid>https://vv2246.github.io/primers/perceptron/</guid>
+      <description>Perceptron is a type of artificial neural network. The perceptron is as good as a Classification algorithm. The perceptron works by finding a hyperplane that separates points with different labels in the training set, as long as they are linearly separable.
+Consider a function $g(\textbf{x})\rightarrow {0,1}$ which is what we want to approximate. If the function is parameterised by a set of coefficients ${w_1,w_2, &amp;hellip;,w_n}=\textbf{w}$, then the function can be rewritten in the form of an inner product $\textbf{w} \cdot \textbf{x}$ .</description>
+    </item>
+    
+    <item>
+      <title>Probability theory</title>
+      <link>https://vv2246.github.io/primers/probability_theory/</link>
+      <pubDate>Thu, 28 Apr 2022 14:41:16 +0200</pubDate>
+      
+      <guid>https://vv2246.github.io/primers/probability_theory/</guid>
+      <description>Random phenomena are observed by means of experiments. Each experiment results in an outcome $\omega$. The collection of all outcomes is a sample space $\Omega$. Any subset of $\Omega$ is an event.
+The collection $\mathcal{F}$ of events to which a probability is assigned is not always identical to the collection of all subsets of $\Omega$. The requirement on $\mathcal{F}$ is that it should be a $\sigma$-field:
+F contains the sample space Ω.</description>
+    </item>
+    
+    <item>
+      <title>Random Variable</title>
+      <link>https://vv2246.github.io/primers/random_variable/</link>
+      <pubDate>Thu, 28 Apr 2022 14:41:16 +0200</pubDate>
+      
+      <guid>https://vv2246.github.io/primers/random_variable/</guid>
+      <description>Random variable Probability theory defines a probability space as a triple ${\Omega,X,p}$, where $\Omega$ is the space of all elementary events, $X$ are disjoint subsets of $\Omega$, called events and $p$ is a probability function that maps events in $X$ to the closed unit interval $p:X\rightarrow [0,1]$. A random variable $x:\Omega\rightarrow X$ maps from the sample space to events. The probability $p$ of a discrete random variable $x$ belongingto the event $x_i ∈ X$ as the result of a statistical process is: $p({ω ∈ Ω : x(ω) ∈ x_i}) = |x_i|/{|\Omega|}$ assuming there is a uniform probability of any elementary event $\omega$ occurring.</description>
+    </item>
+    
+    <item>
+      <title>Game of life</title>
+      <link>https://vv2246.github.io/primers/primer_gameoflife/</link>
+      <pubDate>Wed, 27 Apr 2022 14:41:16 +0200</pubDate>
+      
+      <guid>https://vv2246.github.io/primers/primer_gameoflife/</guid>
+      <description>Conway’s Life is an example of zero-player game, whose evolution is determined by the initial state.
+The game happens on a two-dimensional Cellular Automaton with a simple local update rule that can produce complex global behavior. In a Life configuration, cells in an $n × m$ grid can be either alive or dead (represented by $1$ or $0$ respectively). The life To determine the state of a given cell on the next step, Life considers the $3 × 3$ grid of neighbors around the cell.</description>
+    </item>
+    
+  </channel>
+</rss>

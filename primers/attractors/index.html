@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	
+		
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Attractors &middot; Vaiva Vasiliauskaite</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+		
+		
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/fonts.css">
+		
+		<link rel="icon" href="/favicon.ico"/>
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+		
+		<link href="" rel="alternate" type="application/rss+xml" title="Vaiva Vasiliauskaite" />
+
+		<script src="/js/darkmode.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				renderMathInElement(document.body, {
+					delimiters: [
+						{left: "$$", right: "$$", display: true},
+						{left: "$", right: "$", display: false}
+					]
+				});
+			});
+		</script>
+	</head>
+
+    <body>
+        		<nav class="nav">
+			<div class="nav-container">
+				<a href="/">
+					
+						<h2 class="nav-title">Vaiva Vasiliauskaite</h2>
+					
+				</a>
+				<ul>
+    
+    
+        <li>
+            <a href="/contacts/">
+                
+                <span>Contacts</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/fun/">
+                
+                <span>Fun</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/primers/">
+                
+                <span>Primers</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/publications/">
+                
+                <span>Publications</span>
+                
+            </a>
+        </li>
+    
+</ul>
+			</div>
+		</nav>
+
+        <div id="darkModeToggle" onclick="toggleDarkMode()">
+  &#9680; 
+</div>
+
+        
+
+<main>
+	
+
+
+        <div class="post">
+		<div class="post-info">
+    
+        <br>
+        <span>on&nbsp;</span><time datetime="2022-05-31 14:41:16 &#43;0200 CEST">May 31, 2022</time>
+</div>
+
+		<h1 class="post-title">Attractors</h1>
+<div class="post-line"></div>
+
+		
+
+
+		<p>The <em>basin of attraction</em> is the set of initial conditions from which the solutions converge asymptotically to a given attractor. Since the basin can include the points quite distant from the attracting set, the size of the basin, as a general rule, is not determined by the local properties of the attractor. . In dissipative maps and flows, it is delimited by the complex geometrical configuration of stable manifolds of unstable invariant sets, which can lead to fractal boundaries[1]</p>
+<p><em>sync basin</em> is the attraction basin of the state of full synchronization for which, in the appropriate corotating reference frame, all oscillators share the steady phase value.</p>
+<p>Strange attractors can be the cause of turbulent or chaotic behaviours.</p>
+<p>A classical example of a system analysed via attractor lens is a system of three ODEs (the Rosler system):
+$\dot{x} =-(y+z)$
+$\dot{y} =x+0.2y$
+$\dot{z}=0.4+xz-5.7z$.
+This system has a chaotic attractor. Similarly, Lorenz system, described with the following equations</p>
+<p>$\dot{x} =-\sigma(y-x)$
+$\dot{y} =x(\rho-z)-y$
+$\dot{z}=xy-\beta z$.
+possesses the &ldquo;butterfly&rdquo; attractor looked from the x-z plane:
+<img src="/lorenz.png" alt="demo"></p>
+<p><strong>Conjecture</strong>
+For a reconstruction of a $d$-dimensional system, <em>any</em> $d$ independent quantities are sufficient. Any set of $d$ independent quantities which uniquely and smoothly label the states of the attractor are diffeomorphically equivalent.</p>
+<p>E.g. instead of looking at $z,y,x$, one can look at $\dot{x},\dot{y},z$ and still be able to reconstruct 3-dimensional dynamics. Even more so, it is possible to reconstruct the dynamics by looking at a set of timesteps of <strong>one</strong> variable, e.g. $x(t),x(t-\tau),x(t-2\tau)$.</p>
+<h2 id="systems-dimension">System&rsquo;s dimension</h2>
+<p>The &ldquo;dimension&rdquo; of a system being observed corresponds to the number of independent quantities needed to specify the state of the system at any given instant. Thus the observed dimension of an attractor is the number of independent quantities needed to specify a point on the attractor. Note that the topological dimension of the attractor is directly related to the number of nonnegative characteristic exponents. A spectrum of all negative characteristic exponents implies a pointlike zero-dimensional attractor; one zero characteristic exponent with all others negative implies a one dimensional attractor; one positive and one zero characteristic exponent corresponds to the observation of folded-sheet-like structures making up the attractor; two positive characteristic exponents correspond to volumelike structures; and so on.</p>
+<p>If the phase-space is obtained from values of some variable along with time-delayed values of the same variable, slicing of the space is obtained by forming a conditional PDF: $P(x_t|x_{t-\tau},x_{t-2\tau},&hellip;,x_{t-k\tau})$. If we take $\tau$ to be small, the $k$ conditions are equivalent to specification of the value of x at some time along with the value of all its derivatives up to order $k-1$. We need  to have $\tau&laquo;I/\Gamma$ where is the degree of accuracy with which one can specify a state, and where $\Gamma$<br>
+is the sum of all the positive-characteristic exponents. The dimensionality of the attractor is the number of conditions needed to yield an extremely sharp conditional probability distribution, in which case the system is determined by the conditions.</p>
+<p>The maximal Lyapunov exponent is obtained with a the procedure that consists of making a cut along the attractor, coordinatizing it with the unit interval (0, 1), and accumulating a return  map $x(t)=f(x(t-1))$ by observing where successive passes of the trajectory through the cut occur.
+$\lambda(x_0)=\lim_{n\rightarrow \infty}\frac{1}{n}\sum_{i=0}^{n-1}\ln|f&rsquo;(x_i)|=\lim_{n\rightarrow \infty}\frac{1}{n}\ln|D_{x_0}f^t(x_0)u_0|$ .
+For the whole spectrum of the exponents,consider first a point $x_0$ and an infinitesimal perturbation $u_0$. after time $t$, their images will become $f^t(x_0)$ and $f^t(x_0+u_0)$ and the perturbation becomes $u_t= f^t(x_0+u_0)-f^t(x_0)= D_{x_0}f^t(x_0)u_0$. with a linear approximation. Therefore the average exponential rate of divergence is as defined above.</p>
+<pre tabindex="0"><code>from scipy.integrate import odeint
+import numpy as np
+
+def derivative(vec,t, dynamics = &#34;Rossler&#34;):
+    if dynamics == &#34;Rossler&#34;:
+        x,y,z= vec
+        dxdt = -(y+z)
+        dydt = x + 0.2*y
+        dzdt = 0.4 + x*z - 5.7*z
+    if dynamics == &#34;Lorenz&#34;:
+        beta = 8/3
+        rho = 28
+        sigma =10
+        x,y,z= vec
+        dxdt = sigma*(y-x)
+        dydt = x*(rho-z) -y
+        dzdt = x*y - beta*z
+    return np.array([dxdt,dydt,dzdt])
+
+
+
+dt=0.01
+T=500
+t = np.linspace(0, T, int(T/dt))
+timeseries = odeint(derivative, np.array([1,1,0]), t, args = (&#34;Lorenz&#34;,))
+
+plt.plot(timeseries[:,0],timeseries[:,2],linewidth=0.3,alpha=0.9,color= &#34;slateblue&#34;)
+plt.xlabel(&#34;$x$&#34;)
+plt.ylabel(&#34;$z$&#34;)
+plt.show()
+</code></pre><h1 id="references">References</h1>
+<p>[1] E. Ott, Chaos in Dynamical Systems (Cambridge University Press, Cambridge, UK, 2002).</p>
+<p>[2] Geometry from a Time Series N. H. Packard, J.P.Crutchfield, J.D.Farmer, and R.S.Shaw (PRE, 1979)</p>
+
+
+		
+	</div>
+
+	<div class="pagination">
+		<a href="/primers/emergece/" class="left arrow">&#8592;</a>
+		<a href="/primers/time/" class="right arrow">&#8594;</a>
+
+		<a href="#" class="top">Top</a>
+	</div>
+</main>
+
+
+        		<footer>
+			
+			<span>
+			&copy; <time datetime="2022-09-25 12:39:09.001662 &#43;0200 CEST m=&#43;0.115951969">2022</time> Vaiva. Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			</span>
+		</footer>
+
+    </body>
+</html>

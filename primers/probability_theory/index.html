@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	
+		
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Probability theory &middot; Vaiva Vasiliauskaite</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+		
+		
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/fonts.css">
+		
+		<link rel="icon" href="/favicon.ico"/>
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+		
+		<link href="" rel="alternate" type="application/rss+xml" title="Vaiva Vasiliauskaite" />
+
+		<script src="/js/darkmode.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				renderMathInElement(document.body, {
+					delimiters: [
+						{left: "$$", right: "$$", display: true},
+						{left: "$", right: "$", display: false}
+					]
+				});
+			});
+		</script>
+	</head>
+
+    <body>
+        		<nav class="nav">
+			<div class="nav-container">
+				<a href="/">
+					
+						<h2 class="nav-title">Vaiva Vasiliauskaite</h2>
+					
+				</a>
+				<ul>
+    
+    
+        <li>
+            <a href="/contacts/">
+                
+                <span>Contacts</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/fun/">
+                
+                <span>Fun</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/primers/">
+                
+                <span>Primers</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/publications/">
+                
+                <span>Publications</span>
+                
+            </a>
+        </li>
+    
+</ul>
+			</div>
+		</nav>
+
+        <div id="darkModeToggle" onclick="toggleDarkMode()">
+  &#9680; 
+</div>
+
+        
+
+<main>
+	
+
+
+        <div class="post">
+		<div class="post-info">
+    
+        <br>
+        <span>on&nbsp;</span><time datetime="2022-04-28 14:41:16 &#43;0200 CEST">April 28, 2022</time>
+</div>
+
+		<h1 class="post-title">Probability theory</h1>
+<div class="post-line"></div>
+
+		
+
+
+		<p>Random phenomena are observed by means of experiments. Each experiment results in an outcome $\omega$. The collection of all outcomes is a sample space $\Omega$. Any subset of $\Omega$ is an event.</p>
+<p>The collection $\mathcal{F}$ of events to which a probability is assigned is not always identical to the collection of all subsets of $\Omega$. The requirement on $\mathcal{F}$ is that it should be a $\sigma$-field:</p>
+<ul>
+<li>F contains the sample space Ω.</li>
+<li>if event $A\in \mathcal{F}$, then $\Omega\backslash A\in \mathcal{F}$.</li>
+<li>if $A_i\in \mathcal{F}$, then $\bigcup_{i=1}^\infty A_i \in \mathcal{F}$.</li>
+</ul>
+<p>Probability measure $P:\mathcal{F} \rightarrow [0,1]$ is a function on the $\sigma$-field $\mathcal{F}$:</p>
+<ul>
+<li>The measure of entire sample space is equal to one</li>
+<li>$P$ is countably additive.
+A random variable $x:\Omega \rightarrow \mathcal{F}$ maps from the sample space to events. We can now define the probability $P$ of a discrete <a href="/primers/random_variable">random variable</a> $x$ belonging to the event $x_i \in A$ where $A$ is an event.</li>
+</ul>
+<p>If $\Omega$ is countable we almost always define $\mathcal {F}$ as the power set of $\Omega$, i.e.\ $\mathcal {F} = 2^{\Omega}$.</p>
+<p>Let&rsquo;s suppose we have $2$ discrete random variables, $x_1,x_2$, with $2$ states each. Therefore $\textbf{x}=(x_1,x_2):\Omega \rightarrow \mathbb{R}^2$. The range of $\textbf{x}$ is limited to $2\times 2=4$ possible values.  Any probability distribution for $\textbf{x}$ can be written as a set of 4 probabilities, one for each one of those values. Note that we also have $\mathcal{F}^{tot} = \mathcal{F}_1 \otimes \mathcal{F}_2 =2^{\Omega_1}\otimes 2^{\Omega_2}$:</p>
+<p>$\mathcal{F}^{tot} = \Bigg(\emptyset,[x^{(1)}_0],[x^{(1)}_1],[x^{(2)}_0],[x^{(2)}_1],[x^{(1)}_0,x^{(2)}_0],[x^{(1)}_0,x^{(2)}_1],[x^{(1)}_1,x^{(2)}_0],[x^{(1)}_1,x^{(2)}_1],$</p>
+<p>$[x^{(1)}_0,\Omega_2],[x^{(1)}_1,\Omega_2],[\Omega_1,x^{(2)}_0],[\Omega_1,x^{(2)}_1],[\Omega_1,\Omega_2]\Bigg)$.</p>
+
+
+		
+	</div>
+
+	<div class="pagination">
+		<a href="/primers/random_variable/" class="left arrow">&#8592;</a>
+		<a href="/primers/perceptron/" class="right arrow">&#8594;</a>
+
+		<a href="#" class="top">Top</a>
+	</div>
+</main>
+
+
+        		<footer>
+			
+			<span>
+			&copy; <time datetime="2022-09-25 12:39:08.996634 &#43;0200 CEST m=&#43;0.110923756">2022</time> Vaiva. Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			</span>
+		</footer>
+
+    </body>
+</html>

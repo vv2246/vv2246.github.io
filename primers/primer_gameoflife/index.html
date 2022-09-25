@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	
+		
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Game of life &middot; Vaiva Vasiliauskaite</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+		
+		
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/fonts.css">
+		
+		<link rel="icon" href="/favicon.ico"/>
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+		
+		<link href="" rel="alternate" type="application/rss+xml" title="Vaiva Vasiliauskaite" />
+
+		<script src="/js/darkmode.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				renderMathInElement(document.body, {
+					delimiters: [
+						{left: "$$", right: "$$", display: true},
+						{left: "$", right: "$", display: false}
+					]
+				});
+			});
+		</script>
+	</head>
+
+    <body>
+        		<nav class="nav">
+			<div class="nav-container">
+				<a href="/">
+					
+						<h2 class="nav-title">Vaiva Vasiliauskaite</h2>
+					
+				</a>
+				<ul>
+    
+    
+        <li>
+            <a href="/contacts/">
+                
+                <span>Contacts</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/fun/">
+                
+                <span>Fun</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/primers/">
+                
+                <span>Primers</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/publications/">
+                
+                <span>Publications</span>
+                
+            </a>
+        </li>
+    
+</ul>
+			</div>
+		</nav>
+
+        <div id="darkModeToggle" onclick="toggleDarkMode()">
+  &#9680; 
+</div>
+
+        
+
+<main>
+	
+
+
+        <div class="post">
+		<div class="post-info">
+    
+        <br>
+        <span>on&nbsp;</span><time datetime="2022-04-27 14:41:16 &#43;0200 CEST">April 27, 2022</time>
+</div>
+
+		<h1 class="post-title">Game of life</h1>
+<div class="post-line"></div>
+
+		
+
+
+		<p>Conway’s Life is an example of zero-player game, whose evolution is determined by the initial state.</p>
+<p>The game happens on a two-dimensional Cellular Automaton with a simple local update rule that can produce complex global behavior. In a Life configuration, cells in an $n × m$ grid can be either alive or dead (represented by $1$ or $0$ respectively). The life To determine the state of a given cell on the next step, Life considers the $3 × 3$ grid of neighbors around the cell. Every step, cells with exactly two alive neighbors will maintain their state, cells with exactly three alive neighbors will become alive, and cells with any other number of neighbors will die. Despite the simplicity of the update rule, Life can produce complex output over time.</p>
+<p><img src="/gol.gif" alt="demo"></p>
+<p>Each update is known as a <em>generation</em>.</p>
+<p>Different types of patterns occur in the Game of Life, classified by their behaviour. Three different types of patterns are:</p>
+<ul>
+<li><strong>Still life</strong> does not change from one generation to the next.</li>
+</ul>
+<p><img src="/loaf1.gif" alt="demo">
+<!-- raw HTML omitted --></p>
+<ul>
+<li><strong>Oscillator</strong> returns to initial state after a finite number of generations.</li>
+</ul>
+<p><img src="/toad1.gif" alt="demo">
+<strong>Spaceship</strong>  translate themselves across the grid.</p>
+<p><img src="/glider2.gif" alt="demo"></p>
+<h2 id="code-for-gol">Code for GoL</h2>
+<pre tabindex="0"><code>
+N=50
+T = 100
+
+def update(A):
+    A_new = A.copy()
+    for m in range(1,A.shape[0]):
+        for n in range(1,A.shape[1]):
+            i =A[m,n]
+            sum_neighbours=sum( [A[m,(n-1)%N],A[m,(n+1)%N],A[(m-1)%N,n],A[(m+1)%N,n],A[(m+1)%N,(n+1)%N],\
+                                 A[(m-1)%N,(n-1)%N],A[(m+1)%N,(n-1)%N],A[(m-1)%N,(n+1)%N]])
+            if i==1:
+                #cell is alive
+                if sum_neighbours ==2 or sum_neighbours ==3:
+                    A_new[m,n] = 1
+                else:
+                    #over or under population
+                    A_new[m,n] = 0
+            if i==0:
+                if sum_neighbours==3:
+                    A_new[m,n] = 1
+                else:
+                    A_new[m,n] = 0
+    A = A_new
+    return A
+
+
+A = np.random.choice([0, 1], size=((N)*(N),), p=[0.7, 0.3]).reshape((N),(N))
+    
+for niter in range(100):
+    A = update(A)
+    fig, ax = plt.subplots(figsize=(10,10))
+    im = ax.imshow(A,cmap=&#34;gray&#34;)
+    ax.axis(&#34;off&#34;)
+    plt.show()
+</code></pre>
+
+		
+	</div>
+
+	<div class="pagination">
+		<a href="/fun/" class="left arrow">&#8592;</a>
+		<a href="/primers/random_variable/" class="right arrow">&#8594;</a>
+
+		<a href="#" class="top">Top</a>
+	</div>
+</main>
+
+
+        		<footer>
+			
+			<span>
+			&copy; <time datetime="2022-09-25 12:39:09.00121 &#43;0200 CEST m=&#43;0.115500578">2022</time> Vaiva. Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			</span>
+		</footer>
+
+    </body>
+</html>
