@@ -5,16 +5,7 @@
     <link>https://vv2246.github.io/primers/</link>
     <description>Recent content in Primers on Vaiva Vasiliauskaite</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 27 Jul 2022 14:41:16 +0200</lastBuildDate><atom:link href="https://vv2246.github.io/primers/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Artificial neural network</title>
-      <link>https://vv2246.github.io/primers/artificial_neural_networks/</link>
-      <pubDate>Wed, 27 Jul 2022 14:41:16 +0200</pubDate>
-      
-      <guid>https://vv2246.github.io/primers/artificial_neural_networks/</guid>
-      <description>Neural computing is a paradigm which aims to emulate neurological function and learning, defined as computation, decision making, and prediction deduced from experiences rather than by syntactic means. “Artificial Neural Network” (ANN) is constructed merely by appropriately connecting a group of adaptable nodes (“artificial neurons”). ANN is a model of neural computation, deduced from simplified units which mimic integration and activation properties of real neurons. ANN is an example of Artificial Intelligence &amp;mdash; a class of computational systems that utilise the paradigm of learning.</description>
-    </item>
-    
+    <lastBuildDate>Tue, 14 Jun 2022 14:41:16 +0200</lastBuildDate><atom:link href="https://vv2246.github.io/primers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Time</title>
       <link>https://vv2246.github.io/primers/time/</link>
