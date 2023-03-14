@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes index on Vaiva Vasiliauskaite</title>
+    <link>https://vv2246.github.io/notes/</link>
+    <description>Recent content in Notes index on Vaiva Vasiliauskaite</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 31 May 2022 14:41:16 +0200</lastBuildDate><atom:link href="https://vv2246.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Note</title>
+      <link>https://vv2246.github.io/notes/note1/</link>
+      <pubDate>Tue, 31 May 2022 14:41:16 +0200</pubDate>
+      
+      <guid>https://vv2246.github.io/notes/note1/</guid>
+      <description>The note section is under construction.</description>
+    </item>
+    
+  </channel>
+</rss>
