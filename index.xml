@@ -88,7 +88,8 @@ The game happens on a two-dimensional Cellular Automaton with a simple local upd
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://vv2246.github.io/fun/</guid>
-      <description>Something just for fun.</description>
+      <description>Something just for fun.
+# First Last Handle 1 Mark Otto @mdo 2 Jacob Thornton @fat 3 Larry the Bird @twitter </description>
     </item>
     
     <item>
@@ -108,7 +109,7 @@ Socials Google scholar Github Research gate Twitter LinkedIn </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://vv2246.github.io/publications/</guid>
-      <description>List of my papers Krishna, V., Vasiliauskaite, V., &amp;amp; Antulov-Fantulin, N. (2022). Topic Community Based Temporal Expertise for Question Routing. arXiv preprint arXiv:2207.01753. link Vasiliauskaite, V., Evans, T. S., &amp;amp; Expert, P. (2022). Cycle analysis of Directed Acyclic Graphs. Physica A: Statistical Mechanics and its Applications, 596, 127097. link Vasiliauskaite, V., Lillo, F., &amp;amp; Antulov-Fantulin, N. (2022). Information dynamics of price and liquidity around the 2017 Bitcoin markets crash. Chaos: An Interdisciplinary Journal of Nonlinear Science, 32(4), 043123.</description>
+      <description>List of my papers Vasiliauskaite, V., &amp;amp; Antulov-Fantulin, N. (2023). Universality of neural dynamics on complex networks link Vasiliauskaite, V., Hausladen, C.I. (2023). How Do Circadian Rhythms and Neural Synchrony Shape Networked Cooperation? Front. Phys. Sec. Social Physics 11-17 link M. Eren Akbiyik, Mert Erkul, Killian Kämpf, Vaiva Vasiliauskaite, and Nino Antulov-Fantulin. 2023. Ask “Who”, Not “What”: Bitcoin Volatility Forecasting with Twitter Data. In Proceedings of the Sixteenth ACM International Conference on Web Search and Data Mining (WSDM ’23), February 27–March 3, 2023, Singapore, Singapore.</description>
     </item>
     
   </channel>
