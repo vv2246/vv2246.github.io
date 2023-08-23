@@ -5,7 +5,16 @@
     <link>https://vv2246.github.io/notes/</link>
     <description>Recent content in Notes index on Vaiva Vasiliauskaite</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 31 May 2022 14:41:16 +0200</lastBuildDate><atom:link href="https://vv2246.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Nov 2022 14:41:16 +0200</lastBuildDate><atom:link href="https://vv2246.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Science Aesthetic</title>
+      <link>https://vv2246.github.io/notes/science_aesthetic/</link>
+      <pubDate>Wed, 30 Nov 2022 14:41:16 +0200</pubDate>
+      
+      <guid>https://vv2246.github.io/notes/science_aesthetic/</guid>
+      <description>Aesthetics is a branch of philosophy that deals with the nature of: beauty, taste, art. Aesthetics seems subjective and therefore opposite to scientific, yet it does exist in science. In fact, scientific aesthetics is so pervasive that we expect nature to be elegant, simple and symmetric. Any empirically valid result may be deemed incomplete due to the lack of any of these qualities. A big part of science is admirable, both visually as well as mathematically.</description>
+    </item>
+    
     <item>
       <title>Note</title>
       <link>https://vv2246.github.io/notes/note1/</link>
@@ -13,15 +22,6 @@
       
       <guid>https://vv2246.github.io/notes/note1/</guid>
       <description>The note section is under construction.</description>
-    </item>
-    
-    <item>
-      <title>Science Aesthetic</title>
-      <link>https://vv2246.github.io/notes/science_aesthetic/</link>
-      <pubDate>Tue, 31 May 2022 14:41:16 +0200</pubDate>
-      
-      <guid>https://vv2246.github.io/notes/science_aesthetic/</guid>
-      <description>Aesthetics is a branch of philosophy that deals with the nature of: beauty, taste, art. Aesthetics seems subjective and therefore opposite to scientific, yet it does exist in science. In fact, scientific aesthetics is so pervasive that we expect nature to be elegant, simple and symmetric. Any empirically valid result may be deemed incomplete due to the lack of any of these qualities. A big part of science is admirable, both visually as well as mathematically.</description>
     </item>
     
   </channel>
