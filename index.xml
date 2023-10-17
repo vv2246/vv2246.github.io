@@ -5,7 +5,16 @@
     <link>https://vv2246.github.io/</link>
     <description>Recent content in Hello on Vaiva Vasiliauskaite</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 30 Nov 2022 14:41:16 +0200</lastBuildDate><atom:link href="https://vv2246.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 Oct 2023 16:05:16 +0200</lastBuildDate><atom:link href="https://vv2246.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Artificial Neural Networks</title>
+      <link>https://vv2246.github.io/primers/artificial_neural_networks/</link>
+      <pubDate>Tue, 17 Oct 2023 16:05:16 +0200</pubDate>
+      
+      <guid>https://vv2246.github.io/primers/artificial_neural_networks/</guid>
+      <description>Neural computing is a machine learning paradigm which aims to emulate neurological function and learning. “Artificial Neural Network” (ANN/NN) is constructed merely by appropriately connecting a group of adaptable nodes (“artificial neurons”). ANN is a model of neural computation, deduced from simplified units which mimic integration and activation properties of real neurons. The simplest type of an ANN, composed of a single layer of neurons is a perceptron. The simplest architecture (a network of neurons) is a directed acyclic graph, where neurons are arranged into layers and do not connect to one another intralayer.</description>
+    </item>
+    
     <item>
       <title>Science Aesthetic</title>
       <link>https://vv2246.github.io/notes/science_aesthetic/</link>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	
+	
+		
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-01RN4KWLS9', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Artificial Neural Networks &middot; Vaiva Vasiliauskaite</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+		
+		
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/fonts.css">
+		
+		<link rel="icon" href="/favicon.ico"/>
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+		
+		
+		
+		<script src="/js/darkmode.js"></script>
+		
+		
+		
+		<link href="" rel="alternate" type="application/rss+xml" title="Vaiva Vasiliauskaite" />
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				renderMathInElement(document.body, {
+					delimiters: [
+						{left: "$$", right: "$$", display: true},
+						{left: "$", right: "$", display: false}
+					]
+				});
+			});
+		</script>
+	</head>
+
+    <body>
+        
+<head>
+	
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-01RN4KWLS9"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-01RN4KWLS9', { 'anonymize_ip': false });
+}
+</script>
+
+	
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-01RN4KWLS9', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  </head>
+  
+<nav class="nav">
+			<div class="nav-container">
+				<a href="/">
+					
+						<h2 class="nav-title">Vaiva Vasiliauskaite</h2>
+					
+				</a>
+				<ul>
+    
+    
+        <li>
+            <a href="/contacts/">
+                
+                <span>Contacts</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/fun/">
+                
+                <span>Fun</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/notes/">
+                
+                <span>Notes</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/primers/">
+                
+                <span>Primers</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/publications/">
+                
+                <span>Publications</span>
+                
+            </a>
+        </li>
+    
+</ul>
+			</div>
+		</nav>
+
+		<link rel="stylesheet" href="https://vv2246.github.io/css/bootstrap-table.css">
+
+        <div id="darkModeToggle" onclick="toggleDarkMode()">
+  &#9680; 
+</div>
+
+        
+
+<main>
+	
+
+
+        <div class="post">
+		<div class="post-info">
+    
+        <br>
+        <span>on&nbsp;</span><time datetime="2023-10-17 16:05:16 &#43;0200 CEST">October 17, 2023</time>
+</div>
+
+		<h1 class="post-title">Artificial Neural Networks</h1>
+<div class="post-line"></div>
+			
+		
+
+
+		<p>Neural computing is a machine learning paradigm which aims to emulate neurological function and learning. “Artificial Neural Network” (ANN/NN) is constructed merely by appropriately connecting a group of adaptable nodes (“artificial neurons”). ANN is a model of neural computation, deduced from simplified units which mimic integration and activation properties of real neurons. The simplest type of an ANN, composed of a single layer of neurons is a <a href="/primers/perceptron">perceptron</a>. The simplest architecture (a network of neurons) is a directed acyclic graph, where neurons are arranged into layers and do not connect to one another intralayer. Directed edges connect neurons from a layer $H$ to a layer $H+1$. Layers of neurons are called &ldquo;hidden&rdquo; when they are neither input layers nor output layers. The number of neurons in a layer gives its width. Over the years, numerous architectures of neural networks have been proposed, including graph neural networks and recurrent neural networks which allow for cyclic connections amongst neurons. Importantly, a network is <em>always</em> directed.</p>
+<p>Neural networks are a particularly alluring class of machine learning algorithm because of the Universal Approximation Theorem (UAT) [1]. The original version states that there exists a neural network with a single hidden layer and an arbitrary number of neurons which can approximate any continuous function defined on a bounded domain. Various extensions to this theorem give bounds for neural network&rsquo;s width or depth. Note that UAT assumes a function to be approximated, $g: x\in A\rightarrow \mathbb{R}$, is <em>bounded</em>: $\exist m, M$ s.t. $m\leq g(x)\leq M$ $\forall A$.</p>
+<p><em>A neuron</em> is a non-linear function $f: \textbf{x}\in\mathbb{R}^d \rightarrow \mathbb{R}^1$. So a neuron at a layer $N+1$ takes as an input an output of all of its predecessor neurons from a layer $N$ and outputs a value that will be an input to neurons in the succeeding layer:
+$h_{i}^{N+1}=\sigma(\sum_j w_{j} h_j^N + b_i)$, where $h_j^{N}$ is a state of a neuron $j$ which is at a layer $N$, $w_{j}$ is a weight of an edge $(j,i)$, $b$ is a ``bias&quot; term of a neuron $i$, and $\sigma$ is the non-linearity, such as a Sigmoid, Step function, Tanh, ReLU, etc. One can collect states of all neurons from a layer into a vector and rewrite the mapping in a vector form
+$\textbf{h}^{N+1} = \sigma(\textbf{W} \cdot  \textbf{h}^{N} + \textbf{b} )$. If an input to a neural network is $\textbf{x}\in \mathbb{R}^{n}$, and there are $d_1$ neurons in the first layer, then</p>
+<p>$\textbf{h}^{1} = \sigma(\textbf{W}_1 \cdot  \textbf{x} + \textbf{b}_1 )$, $\textbf{W}\in\mathbb{R}^{d_1 \times n}$, $\textbf{b}_1\in\mathbb{R}^{d_1 }$,</p>
+<p>$\textbf{h}^{2} = \sigma(\textbf{W}_2 \cdot  \textbf{h}^1 + \textbf{b}_2 )$, $\textbf{W}\in\mathbb{R}^{d_2 \times d_1}$, $\textbf{b}_2\in\mathbb{R}^{d_2 }$,</p>
+<p>finally, after some number of layers, the neurons at a layer $N$ produce to an $m$-dimensional output $\hat{\textbf{y}}$:</p>
+<p>$\hat{\textbf{y}}= \textbf{h}^{N} = \sigma(\textbf{W}_N \cdot  \textbf{h}^{N-1} + \textbf{b}_N )$, $\textbf{W}\in\mathbb{R}^{m \times d_N}$, $\textbf{b}_N\in\mathbb{R}^{m }$.</p>
+<p>One can see that a neural network represents a highly non-linear function $\psi: \textbf{x}\in \mathbb{R}^{n}\rightarrow \hat{\textbf{y}} \in\mathbb{R}^{m}$. Coming back to UAT, it states that if we have some bounded function $g: \textbf{x} \in \mathbb{R}^{n}\rightarrow\textbf{y} \in \mathbb{R}^{m}$ there exists a neural network $\psi$ that can approximate $g$ with arbitrary accuracy. In other words, for the same input $\textbf{x}$, $\psi$ produces an output $\hat{\textbf{y}}\approx \textbf{y}$.</p>
+<p>To achieve such approximation, the neural network must be trained, i.e. the weights of its parameters (entries in matrices $\textbf{W}$ and bias vectors $\textbf{b}$) have to be adjusted in a standard supervised learning setting. The most common method for computing gradients in deep ANNs is <a href="/primers/Backpropagation">Backpropagation</a>, which I will write about next time. Backpropagation enables minimization of a loss function of a form
+$\mathcal{L}= \mathbf{E}_{  (\textbf{x},\textbf{y})\in\mathcal{D}} \big[ ||\textbf{y}- \psi(\textbf{x}) ||\big]$, where $||\cdot||$ is a norm. The parameters of the model that achieve the minimal loss given the dataset (minimal with a caveat related to statistical learning theory, which describes the quality of the approximation given finiteness of training data and overfitting) yield our best approximation of $g$.</p>
+<h1 id="references">References</h1>
+<p>[1] Cybenko, G. (1989). Approximation by superpositions of a sigmoidal function. Mathematics of control, signals and systems, 2(4), 303-314.</p>
+
+
+		
+	</div>
+
+	<div class="text-center">
+	<div class="pagination">
+		<a href="/notes/science_aesthetic/" class="left arrow">&#8592;</a>
+
+		<a href="#" class="top">Top</a>
+	</div>
+</div>
+</main>
+
+
+        		<footer>
+			
+			<span>
+			&copy; <time datetime="2023-10-17 17:38:09.647881 &#43;0200 CEST m=&#43;0.113937584">2023</time> Vaiva. Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			</span>
+			
+		</footer>
+
+    </body>
+</html>

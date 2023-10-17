@@ -175,17 +175,13 @@ Essentially, we aim to find a line which separates the two categories. Points th
 <ol>
 <li>compute  $f\left(\textbf{w}(t) \cdot \textbf{x}^{(i)} +b\right)=f\left(\sum_{m=1}^n w_m(t) x_{m}^{(i)} + w_0(t)\cdot 1\right)= \hat{y}_i$ .</li>
 <li>Compute an update for the weight $m$ wrt sample $i$
-$$\Delta w_m^{(i)}(t)=\eta (l_i-\hat{y}_i)$$</li>
+$$\Delta w_m^{(i)}(t)=\eta (l_i-\hat{y}<em>i)x</em>{m}^{(i)}$$ (2). The right term means the following: since there&rsquo;s a discrepancy between the true label and the expected label, the weight has to change. It has to decrease if $l_i&lt;\hat{y}_i$ (		assuming $x$ is always positive), since the label was over-estimated. One can do this for all labels at once:
+$\Delta \textbf{w}^{(i)}(t)=\eta (l_i-$,  $\hat{y}_i)$ , $\textbf{x}^{(i)}$ .</li>
 </ol>
 </li>
+<li>Update the weights $\textbf{w}(t+1)=\textbf{w}(t)+\Delta\textbf{w}^{(i)}(t)$.</li>
 </ol>
 </li>
-</ol>
-<p>$x_{m}^{(i)}$ (2).</p>
-<p>The right term means the following: since there&rsquo;s a discrepancy between the true label and the expected label, the weight has to change. It has to decrease if $l_i&lt;\hat{y}_i$ (assuming $x$ is always positive), since the label was over-estimated. One can do this for all labels at once:
-$\Delta \textbf{w}^{(i)}(t)=\eta (l_i-$,  $\hat{y}_i)$ , $\textbf{x}^{(i)}$ .
-2. Update the weights $\textbf{w}(t+1)=\textbf{w}(t)+\Delta\textbf{w}^{(i)}(t)$.</p>
-<ol start="5">
 <li>(If offline learning) Update weights $\textbf{w}(t+1) = \sum_{i}\Delta \textbf{w}^{(i)}(t)+\textbf{w}(t)$</li>
 <li>Return to step 3, and iterate until convergence.</li>
 </ol>
@@ -355,7 +351,7 @@ if __name__ ==&#34;__main__&#34;:
         		<footer>
 			
 			<span>
-			&copy; <time datetime="2023-09-12 14:25:08.567024 &#43;0200 CEST m=&#43;0.078553626">2023</time> Vaiva. Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			&copy; <time datetime="2023-10-17 17:38:09.65212 &#43;0200 CEST m=&#43;0.118176209">2023</time> Vaiva. Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
 			</span>
 			
 		</footer>
