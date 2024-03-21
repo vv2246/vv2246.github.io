@@ -5,7 +5,25 @@
     <link>https://vv2246.github.io/notes/</link>
     <description>Recent content in Notes index on Vaiva Vasiliauskaite</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 30 Nov 2022 14:41:16 +0200</lastBuildDate><atom:link href="https://vv2246.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Mar 2024 14:41:16 +0200</lastBuildDate><atom:link href="https://vv2246.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Quantifying reliability and accuracy of machine learning models</title>
+      <link>https://vv2246.github.io/notes/quantifying_reliability_ml/</link>
+      <pubDate>Thu, 21 Mar 2024 14:41:16 +0200</pubDate>
+      
+      <guid>https://vv2246.github.io/notes/quantifying_reliability_ml/</guid>
+      <description>Machine learning and Artificial Intelligence have been hot topics for as long as I have been doing research. However, more often than not, I see new papers focusing on prediction or classification accuracy, with less emphasis on understanding the generalization capabilities of models. More models, more data, more applications&amp;hellip; The innovation is driven by increased accuracy on benchmark datasets. While there is a lower bound for the amount of data, and the complexity of a model, that are necessary to learn the data generating function, perhaps the need for ever bigger datasets and models points to our lack of understanding of the basic principles about the systems that are studied through machine learning models.</description>
+    </item>
+    
+    <item>
+      <title>Different types of models</title>
+      <link>https://vv2246.github.io/notes/types_of_models/</link>
+      <pubDate>Wed, 18 Jan 2023 14:41:16 +0200</pubDate>
+      
+      <guid>https://vv2246.github.io/notes/types_of_models/</guid>
+      <description>The overarching goal of science is to explain the world: the nature, the life, or the society. These explanations oftentimes come in the form of models. But there are different types of models, aimed at different goals. I wanted to draw a distinction between different types of models, and got inspired by two papers [1,2] in my search. This is a starter to built upon regarding the notion of modeling in science.</description>
+    </item>
+    
     <item>
       <title>Science Aesthetic</title>
       <link>https://vv2246.github.io/notes/science_aesthetic/</link>
@@ -13,15 +31,6 @@
       
       <guid>https://vv2246.github.io/notes/science_aesthetic/</guid>
       <description>Aesthetics is a branch of philosophy that deals with the nature of: beauty, taste, art. Aesthetics seems subjective and therefore opposite to scientific, yet it does exist in science. In fact, scientific aesthetics is so pervasive that we expect nature to be elegant, simple and symmetric. Any empirically valid result may be deemed incomplete due to the lack of any of these qualities. A big part of science is admirable, both visually as well as mathematically.</description>
-    </item>
-    
-    <item>
-      <title>Note</title>
-      <link>https://vv2246.github.io/notes/note1/</link>
-      <pubDate>Tue, 31 May 2022 14:41:16 +0200</pubDate>
-      
-      <guid>https://vv2246.github.io/notes/note1/</guid>
-      <description>The note section is under construction.</description>
     </item>
     
   </channel>

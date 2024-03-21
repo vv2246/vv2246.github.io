@@ -5,7 +5,16 @@
     <link>https://vv2246.github.io/</link>
     <description>Recent content in Hello on Vaiva Vasiliauskaite</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 17 Oct 2023 16:05:16 +0200</lastBuildDate><atom:link href="https://vv2246.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Mar 2024 14:41:16 +0200</lastBuildDate><atom:link href="https://vv2246.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Quantifying reliability and accuracy of machine learning models</title>
+      <link>https://vv2246.github.io/notes/quantifying_reliability_ml/</link>
+      <pubDate>Thu, 21 Mar 2024 14:41:16 +0200</pubDate>
+      
+      <guid>https://vv2246.github.io/notes/quantifying_reliability_ml/</guid>
+      <description>Machine learning and Artificial Intelligence have been hot topics for as long as I have been doing research. However, more often than not, I see new papers focusing on prediction or classification accuracy, with less emphasis on understanding the generalization capabilities of models. More models, more data, more applications&amp;hellip; The innovation is driven by increased accuracy on benchmark datasets. While there is a lower bound for the amount of data, and the complexity of a model, that are necessary to learn the data generating function, perhaps the need for ever bigger datasets and models points to our lack of understanding of the basic principles about the systems that are studied through machine learning models.</description>
+    </item>
+    
     <item>
       <title>Artificial Neural Networks</title>
       <link>https://vv2246.github.io/primers/artificial_neural_networks/</link>
@@ -13,6 +22,15 @@
       
       <guid>https://vv2246.github.io/primers/artificial_neural_networks/</guid>
       <description>Neural computing is a machine learning paradigm which aims to emulate neurological function and learning. “Artificial Neural Network” (ANN/NN) is constructed merely by appropriately connecting a group of adaptable nodes (“artificial neurons”). ANN is a model of neural computation, deduced from simplified units which mimic integration and activation properties of real neurons. The simplest type of an ANN, composed of a single layer of neurons is a perceptron. The simplest architecture (a network of neurons) is a directed acyclic graph, where neurons are arranged into layers and do not connect to one another intralayer.</description>
+    </item>
+    
+    <item>
+      <title>Different types of models</title>
+      <link>https://vv2246.github.io/notes/types_of_models/</link>
+      <pubDate>Wed, 18 Jan 2023 14:41:16 +0200</pubDate>
+      
+      <guid>https://vv2246.github.io/notes/types_of_models/</guid>
+      <description>The overarching goal of science is to explain the world: the nature, the life, or the society. These explanations oftentimes come in the form of models. But there are different types of models, aimed at different goals. I wanted to draw a distinction between different types of models, and got inspired by two papers [1,2] in my search. This is a starter to built upon regarding the notion of modeling in science.</description>
     </item>
     
     <item>
@@ -40,15 +58,6 @@
       
       <guid>https://vv2246.github.io/primers/attractors/</guid>
       <description>The basin of attraction is the set of initial conditions from which the solutions converge asymptotically to a given attractor. Since the basin can include the points quite distant from the attracting set, the size of the basin, as a general rule, is not determined by the local properties of the attractor. . In dissipative maps and flows, it is delimited by the complex geometrical configuration of stable manifolds of unstable invariant sets, which can lead to fractal boundaries[1]</description>
-    </item>
-    
-    <item>
-      <title>Note</title>
-      <link>https://vv2246.github.io/notes/note1/</link>
-      <pubDate>Tue, 31 May 2022 14:41:16 +0200</pubDate>
-      
-      <guid>https://vv2246.github.io/notes/note1/</guid>
-      <description>The note section is under construction.</description>
     </item>
     
     <item>

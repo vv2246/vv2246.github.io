@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	
+	
+		
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-01RN4KWLS9', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Quantifying reliability and accuracy of machine learning models &middot; Vaiva Vasiliauskaite</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+		
+		
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/fonts.css">
+		
+		<link rel="icon" href="/favicon.ico"/>
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+		
+		
+		
+		<script src="/js/darkmode.js"></script>
+		
+		
+		
+		<link href="" rel="alternate" type="application/rss+xml" title="Vaiva Vasiliauskaite" />
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				renderMathInElement(document.body, {
+					delimiters: [
+						{left: "$$", right: "$$", display: true},
+						{left: "$", right: "$", display: false}
+					]
+				});
+			});
+		</script>
+	</head>
+
+    <body>
+        
+<head>
+	
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-01RN4KWLS9"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-01RN4KWLS9', { 'anonymize_ip': false });
+}
+</script>
+
+	
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-01RN4KWLS9', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  </head>
+  
+<nav class="nav">
+			<div class="nav-container">
+				<a href="/">
+					
+						<h2 class="nav-title">Vaiva Vasiliauskaite</h2>
+					
+				</a>
+				<ul>
+    
+    
+        <li>
+            <a href="/contacts/">
+                
+                <span>Contacts</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/fun/">
+                
+                <span>Fun</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/notes/">
+                
+                <span>Notes</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/primers/">
+                
+                <span>Primers</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/publications/">
+                
+                <span>Publications</span>
+                
+            </a>
+        </li>
+    
+</ul>
+			</div>
+		</nav>
+
+		<link rel="stylesheet" href="https://vv2246.github.io/css/bootstrap-table.css">
+
+        <div id="darkModeToggle" onclick="toggleDarkMode()">
+  &#9680; 
+</div>
+
+        
+
+<main>
+	
+
+
+        <div class="post">
+		<div class="post-info">
+    
+        <br>
+        <span>on&nbsp;</span><time datetime="2024-03-21 14:41:16 &#43;0200 &#43;0200">March 21, 2024</time>
+</div>
+
+		<h1 class="post-title">Quantifying reliability and accuracy of machine learning models</h1>
+<div class="post-line"></div>
+			
+		
+
+
+		<p>Machine learning and Artificial Intelligence have been hot topics for as long as I have been doing research. However, more often than not, I see new papers focusing on prediction or classification accuracy, with less emphasis on understanding the generalization capabilities of models. More models, more data, more applications&hellip; The innovation is driven by increased accuracy on benchmark datasets. While there is a lower bound for the amount of data, and the complexity of a model, that are necessary to learn the data generating function, perhaps the need for ever bigger datasets and models points to our lack of understanding of the basic principles about the systems that are studied through machine learning models. Perhaps, if we use more appropriate models, with more appropriate inductive biases, we do not need so much for a model to learn?</p>
+<p>Another fascinating and important question is out-of-distribution (OOD) generalization, where the the training and test data are sampled from different distributions, with potentially different support. In our recent work [1], we discussed a statistical testing framework to quantify the representativeness of a prediction during inference, i.e. when there is no ground truth to contrast our predictions against.</p>
+<p>First we need to observe that an ensemble of models, trained on bootstrapped versions of training data with a finite support, disagrees more on the estimates of the data-generating function, as the test samples diverge from the training setting.</p>
+<p>For example, let us train an ensemble of 10 overparameterized feed forward neural networks ${ \Psi_m(x) }$ trained independently to approximate $\mathcal{F}(x)=\cos{2x}$ within the range $[-2,2]$ (50 training samples are indicated with black circles).
+<img src="/notes/variance_range.png" alt="demo"></p>
+<p>In $\textbf{a)}$, we see that predictions of the models within the training range overlap, but outside the training range diverge.$ \textbf{b)}$ shows sample variance across ensemble of neural networks ${ \Psi_m(x) }$.</p>
+<p>One possible statistic to quantify acceptable amount of model variance is the variance across neural networks in the prediction, i.e. $d({x}_i) = \text{Var}({\Psi}_m({x}))$  &mdash; the variance term in the bias-variance decomposition. Since we expect the variance across models to increase, i.e. to fall to the right of the null distribution $f_d(\xi)$, an appropriate significance test is right-tailed. A null hypothesis
+$H_0$ tests whether, for a given test data point $x&rsquo;$, a corresponding value of the $d$-statistic, $d&rsquo;$ comes from a null distribution $f_d(\xi)$ that is generated by the null model.
+We reject this hypothesis if the $p$-value, defined as</p>
+<p>$p:= 1 - \int_0^{d&rsquo;}f_d(\xi)\text{d} \xi \equiv \int_{d&rsquo;}^{\infty}f_d(\xi)\text{d} \xi  \leq \alpha$.</p>
+<p>Running this statistical test with $\alpha=0.05$ for the abovementioned example, we find that the model accepts almost all datapoints within the training data&rsquo;s range (shaded in blue), and rejects all datapoints outside the range (unshaded region).</p>
+<p><img src="/notes/variance_range_significance.png" alt="demo"></p>
+<p>While we have developed this framework primarily for evaluating accuracy of predictions of dynamics using graph neural networks, I it could be used for any machine learning models - here it was used for simple feed-forward neural networks aimed at approximating a simple 1-dimensional function.</p>
+<h2 id="references">References</h2>
+<p>[1] <a href="https://arxiv.org/abs/2301.04900">https://arxiv.org/abs/2301.04900</a></p>
+
+
+		
+	</div>
+
+	<div class="text-center">
+	<div class="pagination">
+		<a href="/primers/artificial_neural_networks/" class="left arrow">&#8592;</a>
+
+		<a href="#" class="top">Top</a>
+	</div>
+</div>
+</main>
+
+
+        		<footer>
+			
+			<span>
+			&copy; <time datetime="2024-03-21 17:32:44.560781 &#43;0100 CET m=&#43;0.097267834">2024</time> Vaiva. Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			</span>
+			
+		</footer>
+
+    </body>
+</html>
